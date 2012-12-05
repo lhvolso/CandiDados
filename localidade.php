@@ -3,6 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dados Eleitorais do Paraná - CandiDados</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="Luiz Henrique Volso">
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
 	<header>

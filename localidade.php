@@ -34,7 +34,7 @@
 					<td>Eleito</td>
 				</tr>
 				<tr>
-					<td><a href="candidato/osmar-dias-23">Osmar Dias</td>
+					<td><a href="candidato/osmar-dias-23">Osmar Dias</a></td>
 					<td>52,44%</td>
 					<td>3.039.774 votos</td>
 					<td>Não Eleito</td>
@@ -61,13 +61,13 @@
 					<td>Eleito</td>
 				</tr>
 				<tr>
-					<td><a href="candidato/osmar-dias-23">Osmar Dias</td>
+					<td><a href="candidato/osmar-dias-23">Osmar Dias</a></td>
 					<td>52,44%</td>
 					<td>3.039.774 votos</td>
 					<td>Não Eleito</td>
 				</tr>
 				<tr>
-					<td><a href="candidato/paulo-salamuni-13">Paulo Salamuni</td>
+					<td><a href="candidato/paulo-salamuni-13">Paulo Salamuni</a></td>
 					<td>1,41%</td>
 					<td>3.039.774 votos</td>
 					<td>Não Eleito</td>
@@ -95,13 +95,13 @@
 					<td>Eleito</td>
 				</tr>
 				<tr>
-					<td><a href="candidato/osmar-dias-23">Osmar Dias</td>
+					<td><a href="candidato/osmar-dias-23">Osmar Dias</a></td>
 					<td>52,44%</td>
 					<td>3.039.774 votos</td>
 					<td>Não Eleito</td>
 				</tr>
 				<tr>
-					<td><a href="candidato/paulo-salamuni-13">Paulo Salamuni</td>
+					<td><a href="candidato/paulo-salamuni-13">Paulo Salamuni</a></td>
 					<td>1,41%</td>
 					<td>3.039.774 votos</td>
 					<td>Não Eleito</td>

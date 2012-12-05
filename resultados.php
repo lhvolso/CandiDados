@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
-	<title>Nome do Candidato - CandiDados</title>
+	<title>Dados Eleitorais do Paraná - CandiDados</title>
 </head>
 <body>
 	<header>
@@ -14,21 +14,8 @@
 		</form>
 	</header>
 	<article>
-		<figure>
-			<img src="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCandidato=160000028590&amp;codigoMunicipio=78255" alt="Teste">
-			<figcaption>Imagem de urna do candidato Nome do Condidato</figcaption>
-		</figure>
-		<h1>Nome do Candidato</h1>
-		<p>Nome completo do candidato, Brasileiro, casado, nascido em Cianorte/PR em 22/12/2012.</p>
-		<p>Escolaridade: Segundo Grau Completo</p>
-		<p>Profissão: Empresário</p>
-		
-		<h2>Eleições 2012</h2>
-		<ul>
-			<li><a href="#">2010</a></li>
-			<li><a href="#">2008</a></li>
-		</ul>
-		<h3>Governador, Segundo Turno / 2010</h3>
+		<h1>Eleições 2012</h1>
+		<h2>Presidente, Segundo Turno / 2010</h2>
 		<table>
 			<caption>Resultados em porcentagem e número de votos dos candidatos concorrentes.</caption>
 			<thead>
@@ -54,7 +41,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<h3>Governador, Primeiro Turno / 2010</h3>
+		
+		<h2>Presidente, Primeiro Turno / 2010</h2>
 		<table>
 			<caption>Resultados em porcentagem e número de votos dos candidatos concorrentes.</caption>
 			<thead>
@@ -87,29 +75,60 @@
 			</tbody>
 		</table>
 		<a href="#">Resultado completo dessa votação</a>
+		
+		<h2>Senador, 2010</h2>
+		<table>
+			<caption>Resultados em porcentagem e número de votos dos candidatos concorrentes.</caption>
+			<thead>
+				<tr>
+					<th>Candidato</th>
+					<th>Porcentagem</th>
+					<th>Total de Votos</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="candidato/beto-richa-45">Beto Richa</a></td>
+					<td>52,44%</td>
+					<td>3.039.774 votos</td>
+					<td>Eleito</td>
+				</tr>
+				<tr>
+					<td><a href="candidato/osmar-dias-23">Osmar Dias</a></td>
+					<td>52,44%</td>
+					<td>3.039.774 votos</td>
+					<td>Não Eleito</td>
+				</tr>
+				<tr>
+					<td><a href="candidato/paulo-salamuni-13">Paulo Salamuni</a></td>
+					<td>1,41%</td>
+					<td>3.039.774 votos</td>
+					<td>Não Eleito</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="#">Resultado completo dessa votação</a>
+		
+		<a href="#">Resultados de Deputados Federais</a>
+		<a href="#">Resultados de Deputados Estaduais</a>
 	</article>
 	<aside>
-		<h2>Dados de Campanha</h2>
+		<h2>Dados do Eleitorado</h2>
+		<p>O Paraná possui 700 000 eleitores, 50% são mulheres e dentre eles 94,2% compareceram às urnas na eleição de 2012.</p>
+
+		<p>O estado totalizou 680 754 votos válidos (92%), 32 000 votos brancos e 12 000 nulos</p>
+		
+		<a href="#">Dados completos do eleitorado</a>
+		
+		<h2>Principais Cidades</h2>
 		<ul>
-			<li>2012</li>
-			<li><a href="#">2010</a></li>
-			<li><a href="#">2008</a></li>
+			<li><a href="#">Curitiba</a></li>
+			<li><a href="#">Londrina</a></li>
+			<li><a href="#">Maringá</a></li>
+			<li><a href="#">Foz do Iguaçu</a></li>
+			<li><a href="#">Campo Mourão</a></li>
 		</ul>
-		<p>Cargo pretendido: Prefeito (eleito)</p>
-
-		<p>Partido: PQP</p>
-
-		<p>Valor dos bens declarados na ultima eleição:</p>
-		<p>R$ 700.000,00</p>
-
-		<p>Valor máximo de gastos na campanha:</p>
-		<p>R$ 1.000.000,00</p>
-
-		<p>Total de gastos declarados:</p>
-		<p>R$ 1.200.00,00</p>
-
-		<p>Total de doações:</p>
-		<p>R$ 200.000,00</p>
 	</aside>
 	<footer>
 		<nav>

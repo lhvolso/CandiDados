@@ -1,3 +1,128 @@
 body{
 	font-size: 10px;
+	font-family: 'Titillium Web', sans-serif;
+	background: url(../imagens/fundo-body.gif);
+}
+
+
+h1.logo{
+    font-size: 10em;
+    font-weight: 200;
+    color: #7F7F7F;
+    text-align: center;
+    margin: 36px 0 107px 0;
+}
+
+h1.logo strong{
+    font-weight: 400;
+    color: #0071BB;
+}
+
+p.infobusca{
+    font-size: 3em;
+    color: #999999;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+.busca input{
+    width: 90.625%;
+    height: 60px;
+    float: left;
+    border: none;
+    background: #D2D2C0;
+    font-size: 3em;
+    color: #FFF;
+    padding: 0 0.33em;
+    border-radius: 10px 0 10px 10px;
+}
+
+.busca button{
+    height: 60px;
+    width: 60px;
+    float: right;
+    border: none;
+    font-size: 0;
+    background: #FAD182 url(../imagens/fundo-bot-busca.png) no-repeat center center;
+    border-radius: 0 10px 10px 10px;
+}
+
+.inicio{
+    padding: 100px 0 0 0;
+}
+
+.inicio section{
+    width: 46.91%;
+}
+
+.inicio h2{
+    border-bottom: 1px solid #B2B2B2;
+    padding: 0 0 20px 20px;
+    margin: 0 0 10px 0;
+}
+
+.inicio p{
+    font-size: 2em;
+    color: #666;
+    line-height: 150%;
+    font-weight: 200;
+}
+
+.tituloazul{
+    font-size: 3em;
+    color: #0071BB;
+    padding: 0 0 0 20px;
+    background: url(../imagens/detalhe-titulo-azul.png) no-repeat left 4px;
+}
+
+footer{
+    background: url(../imagens/fundo-rodape.png);
+    margin: 100px 0 0 0;
+}
+
+footer ul{
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0 0 6.354166%;
+}
+
+footer li{
+    float: left;
+    padding: 0 0 0 101px;
+    background: url(../imagens/separador-menu-rodape.gif) no-repeat 20px center;
+}
+
+footer li:first-child{
+    background: none;
+    padding: 0;
+}
+
+footer a{
+    font-size: 3em;
+    color: #F7921E;
+    font-weight: 200;
+    text-decoration: none;
+    line-height: 60px;
+}
+
+footer a:hover, footer a:focus{
+    border-bottom: 2px solid #F7921E;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.centro{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float: right;
 }

@@ -4,6 +4,9 @@ body{
 	background: url(../imagens/fundo-body.gif);
 }
 
+header{
+    background: url(../imagens/detalhe-topo.png) repeat-x center 90px;
+}
 
 h1.logo{
     font-size: 10em;

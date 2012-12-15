@@ -1,10 +1,11 @@
 body{
 	font-size: 10px;
+    font-weight: 200;
 	font-family: 'Titillium Web', sans-serif;
 	background: url(../imagens/fundo-body.gif);
 }
 
-header{
+header.inicial{
     background: url(../imagens/detalhe-topo.png) repeat-x center 90px;
 }
 
@@ -26,6 +27,7 @@ p.infobusca{
     color: #999999;
     text-align: center;
     margin: 0 0 16px 0;
+    clear: both;
 }
 
 .busca input{
@@ -113,13 +115,264 @@ footer a:hover, footer a:focus{
 }
 
 strong{
-    font-weight: 700;
+    font-weight: 400;
 }
+
+/***** INTERNAS *****/
+header.internas{
+    background: url(../imagens/detalhe-topo-960.png) repeat-x center 130px;
+}
+
+.internas div.centro{
+    background: url(../imagens/detalhe-topo-padrao.png) no-repeat 232px 130px;   
+}
+
+header.internas a.logo{
+    font-size: 7.323em;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-decoration: none;
+    line-height: 80%;
+    color: #7F7F7F;
+    display: block;
+    float: left;
+    margin: 17px 0 60px 0;
+}
+
+header.internas a.logo strong{
+    display: block;
+    font-weight: 400;
+    letter-spacing: -4px;
+    color: #0071BB;
+}
+
+#publicidade{
+    float: right;
+    margin: 19px 0 0 0;
+}
+
+.internas article{
+    width: 610px;
+    float: left;
+    padding: 60px 0 0 0;
+}
+
+.internas h1{
+    margin: 0 0 25px 0;
+}
+
+.internas aside p{
+    font-size: 1.6em;
+    color: #666;
+    line-height: 180%;
+    font-weight: 200;
+    margin: 0 0 12px 0;
+}
+
+.internas li a{
+    font-size: 1.8em;
+    line-height: 180%;
+    text-decoration: none;
+    color: #F15924;
+    font-weight: 200;
+}
+
+.internas li a:hover, .internas li a:focus{
+    text-decoration: underline;
+}
+
+.internas li a:before{
+    content: '» ';
+}
+
+.internas article h2, .internas article h3{
+    font-size: 2em;
+    font-weight: 700;
+    color: #666;
+    margin: 0 0 20px 0;
+}
+
+table{
+    margin: 0 0 70px 0;
+    width: 100%;
+    position: relative;
+}
+
+table caption{
+    font-size: 1.4em;
+    font-weight: 200;
+    text-align: left;
+    position: absolute;
+    bottom: -25px;
+    font-style: italic;
+}
+
+th, td{
+    font-size: 2em;
+    line-height: 200%;
+    font-weight: 200;
+    color: #666;
+    text-align: left;
+    border-bottom: 1px dashed #CCC;
+}
+
+th{
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+th.nome{
+    width: 40%;
+}
+
+th.porcentagem{
+    width: 20%;
+    text-align: center;
+}
+
+th.votos{
+    width: 20%;
+    text-align: center;
+}
+
+th.resultado{
+    width: 15%;
+    text-align: right;
+}
+
+td a{
+    text-decoration: none;
+    color: #F15924;
+}
+
+td a:hover, td a:focus{
+    text-decoration: underline;
+}
+
+.internas aside{
+    width: 300px;
+    float: right;
+    padding: 70px 0 0 0;
+}
+
+.internas aside h2{
+    font-size: 2.4em;
+    margin: 0 0 20px 0;
+}
+
+.internas aside h2.margem{
+    margin: 45px 0 20px 0;
+}
+
+a.maisdetalhes{
+    font-size: 1.8em;
+    font-weight: 400;
+    text-decoration: none;
+    color: #F15924;
+    display: block;
+}
+
+a.maisdetalhes:hover, a.maisdetalhes:focus{
+    text-decoration: underline;
+}
+
+a.maisdetalhes:before{
+    content: '» ';
+}
+
+div.candidato figure{
+    width: 161px;
+    float: left;
+    padding: 10px;
+    background-color: #EEE;
+    margin: 0 30px 35px 0;
+}
+
+div.candidato figure figcaption{
+    font-size: 1.4em;
+    color: #666;
+    font-weight: 200;
+    line-height: 140%;
+}
+
+div.candidato h1{
+    padding: 0 0 0 221px;
+    background-position: 201px 0;
+}
+
+div.candidato h2{
+    font-size: 2.4em;
+    font-weight: 200;
+    color: #0071BB;
+    padding: 0 0 0 20px;
+    background: url(../imagens/detalhe-titulo-azul.png) no-repeat left 4px;
+}
+
+div.candidato p{
+    font-size: 1.6em;
+    color: #666;
+    line-height: 180%;
+    font-weight: 200;
+    margin: 0 0 0 0;
+}
+
+div.candidato p.margem{
+    margin: 0 0 20px 0;
+}
+
+ul.outrosanos {
+    overflow: hidden;
+    margin: -20px 0 25px 0;
+}
+
+ul.outrosanos li{
+    float: left;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #666;
+    line-height: 180%;
+    margin: 0 5px 0 0;
+}
+
+ul.outrosanos li a{
+    font-size: 1em;
+}
+
+ul.outrosanos li:before{
+    content: '- ';
+}
+
+ul.outrosanos li:first-child:before{
+    content: '';
+}
+
+ul.outrosanos li a:before{
+    content: '';
+}
+
+/********* AUTOCEMPLETE *********/
+.ui-menu .ui-menu-item a span{
+    float: right;
+}
+/********* AUTOCEMPLETE *********/
 
 .centro{
     width: 960px;
     margin: 0 auto;
     overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
 }
 
 .fleft{
@@ -128,4 +381,8 @@ strong{
 
 .fright{
     float: right;
+}
+
+.clear{
+    clear: both;
 }

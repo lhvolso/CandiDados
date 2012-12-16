@@ -12,55 +12,18 @@
 	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.9.2.custom.css">
 	<link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,200,700" rel="stylesheet" type="text/css">
 	<script src="js/jquery.js"></script>
-	<script src="js/jquery-ui-full.js"></script>
-	<script>
-	$('document').ready(function(){
-
-		$( "#busca" ).autocomplete({
-			source: function( request, response ) {
-				$.ajax({
-					type: "post",
-					url: "retorna-dados.php",
-					dataType: "json",
-					data: { busca: request.term },
-					beforeSend: function(){
-						
-					},
-					success: function(data) {
-						if(data != null){
-							response( $.map(data, function(item){
-								return{	label: item.label, value: item.value, id: item.id}
-							}));
-						}
-					}
-				});
-			},
-			minLength: 3,
-			select: function( event, ui ) {
-				$('#tabela').val(ui.item.label);
-				$('#id').val(ui.item.id);
-				$('#busca').parent().submit();
-			},
-
-		})
-		.data( "autocomplete" )._renderItem = function( ul, item ) {
-			return $( "<li></li>" )
-				.data( "item.autocomplete", item )
-				.append( "<a>" + item.value + " <span>" + item.label + "</span></a>")
-				.appendTo( ul );
-		};
-	});
-	</script>
+	<script src="js/jquery-ui.js"></script>
+	<!--<script src="js/scripts.js"></script>-->
 </head>
 <body>
 	<header class="inicial">
 		<div class="centro">
 			<h1 class="logo">CANDI<strong>DADOS</strong></h1>
-			<form method="get" class="busca">
+			<form method="get" class="busca" action="busca.php">
 				<label for="busca">Pesquise pelo nome do candidato, ano da eleição, local ou cargo:</label>
 				<input type="text" name="busca" id="busca">
-				<input type="hidden" name="tabela" id="tabela">
-				<input type="hidden" name="id" id="id">
+				<!--<input type="hidden" name="tabela" id="tabela">-->
+				<!--<input type="hidden" name="id" id="id">-->
 				<button type="submit">Buscar</button>
 			</form>
 		</div>

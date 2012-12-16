@@ -30,7 +30,7 @@
 	<div class="centro internas candidato">
 		<article>
 			<figure>
-				<img src="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCandidato=160000028590&amp;codigoMunicipio=78255" alt="Teste">
+				<img src="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCandidato=160000028590&amp;codigoMunicipio=78255" alt="Nome do Candidato">
 				<figcaption>Foto de urna do candidato Nome do Condidato</figcaption>
 			</figure>
 			<h1 class="tituloazul">Almir Fernandes de Oliveira</h1>

@@ -1,25 +1,29 @@
 <?php
 include('config/config.php');
-header("Content-Type: text/html; charset=UTF-8");
-$string = tiraAcento($_POST['busca']);
+?>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Resultados da Pesquisa - CandiDados</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="Luiz Henrique Volso">
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,200,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+<?php
+//echo 'Pesquisa: '.$_GET['query'].'<br>';
+//echo 'Ano: '.$_GET['ano'].'<br>';
+//echo 'Estado: '.$_GET['estado'].'<br>';
+//echo 'Cidade: '.$_GET['cidade'].'<br>';
+//echo 'Candidato: '.$_GET['candidato'].'<br>';
 
-//Verifica a existência do ano na busca
-//if(preg_match_all('/20[0-9][02468]/', $string, $saida)){
-//	$ano = $saida[0][0];
-//}else{
-//	$ano = '';
-//}
-
-//Retirar o ano encontado da string original
-//$string = str_replace($ano, '', $string);
-
-//Dividir os termos para a busca por relevância
+$string = tiraAcento($_GET['query']);
 $termos = preg_split("/[ .,;']/", $string);
-//echo implode(' ', $termos);
-foreach($termos as $termo){
-	//echo $termo.', ';
-}
-
 $i = 1;
 $sql = "SELECT nome, id, tabela, ";
 $sql .= "SUM(CASE WHEN nome LIKE '".trim(implode(' ', $termos))."' THEN 1 ELSE 0 END) + ";
@@ -71,21 +75,12 @@ $sql .= "FROM (";
 		$i++;
 	}
 $sql .= ") x GROUP BY nome ORDER BY relevancia DESC, tabela DESC, nome LIMIT 0, 10";
-
 $busca = mysql_query($sql) or die (mysql_error());
-$i = 0;
 while($res = mysql_fetch_array($busca)){
 
-	$retorno[$i] = Array(
-
-		'label' => $res['tabela'],
-		'value' => utf8_encode($res['nome']),
-		'id' => $res['id']
-
-	);
-	$i++;
+	echo '<p>'.utf8_encode($res['nome']).'</p>';
+	
 }
-echo json_encode($retorno);
 mysql_free_result($busca);
 mysql_close($connect);
 
@@ -99,23 +94,7 @@ function tiraAcento($var){
 	$var = str_replace("ç","c",$var);
 	return $var;
 }
-// SELECT nome, tabela, 
-// SUM(CASE WHEN nome LIKE 'sao joao' THEN 1 ELSE 0 END) + 
-// SUM(CASE WHEN nome LIKE '%sao joao%' THEN 1 ELSE 0 END) + 
-// SUM(CASE WHEN nome LIKE '%sao%' THEN 1 ELSE 0 END) + 
-// SUM(CASE WHEN nome LIKE '%joao%' THEN 1 ELSE 0 END) AS relevancia  
-// FROM (
-// 	(SELECT nome_urna_candidato AS nome, CONCAT('candidato') AS tabela FROM candidatos WHERE 
-// 		(nome_urna_candidato LIKE '%sao%') OR 
-// 		(nome_urna_candidato LIKE '%joao%') GROUP BY nome_urna_candidato)
-// 	UNION
-// 	(SELECT titulo_estado AS nome, CONCAT('estado') AS tabela FROM estados WHERE 
-// 		(titulo_estado LIKE '%sao%') OR 
-// 		(titulo_estado LIKE '%joao%') GROUP BY titulo_estado)
-// 	UNION	
-// 	(SELECT titulo_cidade AS nome, CONCAT('cidade') AS tabela FROM cidades WHERE 
-// 		(titulo_cidade LIKE '%sao%') OR 
-// 		(titulo_cidade LIKE '%joao%') GROUP BY titulo_cidade)
-// 	) x
-// GROUP BY nome ORDER BY relevancia DESC, nome
+
 ?>
+</body>
+</html>

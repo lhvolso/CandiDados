@@ -22,7 +22,8 @@ h1.logo strong{
     color: #0071BB;
 }
 
-p.infobusca{
+.busca label{
+    display: block;
     font-size: 3em;
     color: #999999;
     text-align: center;

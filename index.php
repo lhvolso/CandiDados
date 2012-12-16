@@ -56,9 +56,9 @@
 	<header class="inicial">
 		<div class="centro">
 			<h1 class="logo">CANDI<strong>DADOS</strong></h1>
-			<p class="infobusca">Pesquise pelo nome do candidato, ano da eleição, local ou cargo:</p>
 			<form method="get" class="busca">
-				<input type="text" name="busca" id="busca" placeholder="ex.: Nome do candidato Paraná 2010">
+				<label for="busca">Pesquise pelo nome do candidato, ano da eleição, local ou cargo:</label>
+				<input type="text" name="busca" id="busca">
 				<input type="hidden" name="tabela" id="tabela">
 				<input type="hidden" name="id" id="id">
 				<button type="submit">Buscar</button>

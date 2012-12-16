@@ -18,9 +18,11 @@
 			<div id="publicidade">
 				<a href="#"><img src="imagens/banner-728x90.png" alt=""></a>
 			</div>
-			<p class="infobusca">Pesquise pelo nome do candidato, ano da eleição, local ou cargo:</p>
-			<form action="#" class="busca">
-				<input type="text" name="busca" placeholder="ex.: Nome do candidato Paraná 2010">
+			<form method="get" class="busca">
+				<label for="busca">Pesquise pelo nome do candidato, ano da eleição, local ou cargo:</label>
+				<input type="text" name="busca" id="busca">
+				<input type="hidden" name="tabela" id="tabela">
+				<input type="hidden" name="id" id="id">
 				<button type="submit">Buscar</button>
 			</form>
 		</div>

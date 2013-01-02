@@ -19,13 +19,7 @@
 	<header class="inicial">
 		<div class="centro">
 			<h1 class="logo">CANDI<strong>DADOS</strong></h1>
-			<form method="get" class="busca" action="busca.php">
-				<label for="busca">Pesquise pelo nome do candidato, ano da eleição, local ou cargo:</label>
-				<input type="text" name="busca" id="busca">
-				<!--<input type="hidden" name="tabela" id="tabela">-->
-				<!--<input type="hidden" name="id" id="id">-->
-				<button type="submit">Buscar</button>
-			</form>
+			<?php include("includes/form-busca.php"); ?>
 		</div>
 	</header>
 	<div class="centro inicio">
@@ -39,16 +33,7 @@
 		</section>
 	</div>
 	<footer>
-		<div class="centro">
-			<nav>
-				<ul>
-					<li><a href="#">o projeto</a></li>
-					<li><a href="#">os desenvolvedores</a></li>
-					<li><a href="#">glossário</a></li>
-					<li><a href="#">ajuda</a></li>
-				</ul>
-			</nav>
-		</div>
+		<?php include("includes/rodape.php"); ?>
 	</footer>
 </body>
 </html>

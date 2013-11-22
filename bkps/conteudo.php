@@ -21,7 +21,7 @@ include('config/config.php');
 			<div id="publicidade">
 				<a href="#"><img src="<?php echo $path;?>/imagens/banner-728x90.png" alt=""></a>
 			</div>
-			<?php include("includes/form-busca.php");  ?>
+			<?php include("includes/form-busca.php"); ?>
 		</div>
 	</header>
 	<?php 

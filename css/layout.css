@@ -222,13 +222,26 @@ table caption{
     font-style: italic;
 }
 
+tr.destaque{
+    background-color: #ECECEC;
+}
+
+tr.destaque a{
+    font-size: 1.2em;
+}
+
+tr.destaque td{
+    font-weight: 400;
+}
+
 th, td{
     font-size: 2em;
-    line-height: 200%;
+    line-height: 150%;
     font-weight: 200;
     color: #666;
     text-align: left;
     border-bottom: 1px dashed #CCC;
+    padding: 6px 0;
 }
 
 th{
@@ -237,21 +250,21 @@ th{
 }
 
 th.nome{
-    width: 40%;
+    width: 48%;
 }
 
 th.porcentagem{
-    width: 20%;
-    text-align: center;
+    width: 10%;
+    text-align: right;
 }
 
 th.votos{
-    width: 20%;
-    text-align: center;
+    width: 22%;
+    text-align: right;
 }
 
 th.resultado{
-    width: 15%;
+    width: 20%;
     text-align: right;
 }
 

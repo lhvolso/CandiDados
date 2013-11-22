@@ -9,11 +9,9 @@
 	<meta name="robots" content="noindex">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/layout.css">
-	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.9.2.custom.css">
 	<link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,200,700" rel="stylesheet" type="text/css">
 	<script src="js/jquery.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<!--<script src="js/scripts.js"></script>-->
+	<script src="js/scripts.js"></script>
 </head>
 <body>
 	<header class="inicial">

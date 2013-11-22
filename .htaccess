@@ -2,76 +2,75 @@ RewriteEngine on
 RewriteBase /
 
 #Redirecionamento de Buscas
-
 RewriteCond %{QUERY_STRING} !=""
-RewriteCond %{QUERY_STRING} ^busca=([0-9-a-z\-+]+)$ [NC]
+RewriteCond %{QUERY_STRING} ^busca=([^/]*)$ [NC]
 RewriteRule ^(.*)$ /CandiDados/pesquisa/%1? [R]
 RewriteRule ^pesquisa/([^/]*)$ /CandiDados/pesquisa.php?query=$1
 RewriteRule ^pesquisa/([^/]*)/([^/]*)$ /CandiDados/pesquisa.php?query=$1&pg=$2
 
 #Redirecionamento para Ano Eleitoral
-RewriteRule ^eleicoes-([^/]*)$ /CandiDados/conteudo.php?ano=$1
+#RewriteRule ^eleicoes-([^/]*)$ /CandiDados/conteudo.php?ano=$1
 
 #Redirecionamento para Candidatos
-RewriteRule ^eleicoes-([^/]*)/candidatos/([^/]*)$ /CandiDados/conteudo.php?ano=$1&candidato=$2
+RewriteRule ^eleicoes-([^/]*)/candidatos/([^/]*)/([^/]*)$ /CandiDados/candidato.php?ano=$1&cidade=$2&candidato=$3
 
 #Redirecionamentos de Estados
-RewriteRule ^eleicoes-([^/]*)/acre$ /CandiDados/conteudo.php?ano=$1&estado=AC
-RewriteRule ^eleicoes-([^/]*)/amapa$ /CandiDados/conteudo.php?ano=$1&estado=AP
-RewriteRule ^eleicoes-([^/]*)/amazonas$ /CandiDados/conteudo.php?ano=$1&estado=AM
-RewriteRule ^eleicoes-([^/]*)/para$ /CandiDados/conteudo.php?ano=$1&estado=PA
-RewriteRule ^eleicoes-([^/]*)/rondonia$ /CandiDados/conteudo.php?ano=$1&estado=RO
-RewriteRule ^eleicoes-([^/]*)/roraima$ /CandiDados/conteudo.php?ano=$1&estado=RR
-RewriteRule ^eleicoes-([^/]*)/tocantins$ /CandiDados/conteudo.php?ano=$1&estado=TO
-RewriteRule ^eleicoes-([^/]*)/alagoas$ /CandiDados/conteudo.php?ano=$1&estado=AL
-RewriteRule ^eleicoes-([^/]*)/bahia$ /CandiDados/conteudo.php?ano=$1&estado=BA
-RewriteRule ^eleicoes-([^/]*)/ceara$ /CandiDados/conteudo.php?ano=$1&estado=CE
-RewriteRule ^eleicoes-([^/]*)/maranhao$ /CandiDados/conteudo.php?ano=$1&estado=MA
-RewriteRule ^eleicoes-([^/]*)/paraiba$ /CandiDados/conteudo.php?ano=$1&estado=PB
-RewriteRule ^eleicoes-([^/]*)/pernambuco$ /CandiDados/conteudo.php?ano=$1&estado=PE
-RewriteRule ^eleicoes-([^/]*)/piaui$ /CandiDados/conteudo.php?ano=$1&estado=PI
-RewriteRule ^eleicoes-([^/]*)/rio-grande-do-norte$ /CandiDados/conteudo.php?ano=$1&estado=RN
-RewriteRule ^eleicoes-([^/]*)/sergipe$ /CandiDados/conteudo.php?ano=$1&estado=SE
-RewriteRule ^eleicoes-([^/]*)/distrito-federal$ /CandiDados/conteudo.php?ano=$1&estado=DF
-RewriteRule ^eleicoes-([^/]*)/goias$ /CandiDados/conteudo.php?ano=$1&estado=GO
-RewriteRule ^eleicoes-([^/]*)/mato-grosso$ /CandiDados/conteudo.php?ano=$1&estado=MT
-RewriteRule ^eleicoes-([^/]*)/mato-grosso-do-sul$ /CandiDados/conteudo.php?ano=$1&estado=MS
-RewriteRule ^eleicoes-([^/]*)/espirito-santo$ /CandiDados/conteudo.php?ano=$1&estado=ES
-RewriteRule ^eleicoes-([^/]*)/minas-gerais$ /CandiDados/conteudo.php?ano=$1&estado=MG
-RewriteRule ^eleicoes-([^/]*)/rio-de-janeiro$ /CandiDados/conteudo.php?ano=$1&estado=RJ
-RewriteRule ^eleicoes-([^/]*)/sao-paulo$ /CandiDados/conteudo.php?ano=$1&estado=SP
-RewriteRule ^eleicoes-([^/]*)/parana$ /CandiDados/conteudo.php?ano=$1&estado=PR
-RewriteRule ^eleicoes-([^/]*)/rio-grande-do-sul$ /CandiDados/conteudo.php?ano=$1&estado=RS
-RewriteRule ^eleicoes-([^/]*)/santa-catarina$ /CandiDados/conteudo.php?ano=$1&estado=SC
+RewriteRule ^eleicoes-([^/]*)/acre$ /CandiDados/localidade.php?ano=$1&estado=AC
+RewriteRule ^eleicoes-([^/]*)/amapa$ /CandiDados/localidade.php?ano=$1&estado=AP
+RewriteRule ^eleicoes-([^/]*)/amazonas$ /CandiDados/localidade.php?ano=$1&estado=AM
+RewriteRule ^eleicoes-([^/]*)/para$ /CandiDados/localidade.php?ano=$1&estado=PA
+RewriteRule ^eleicoes-([^/]*)/rondonia$ /CandiDados/localidade.php?ano=$1&estado=RO
+RewriteRule ^eleicoes-([^/]*)/roraima$ /CandiDados/localidade.php?ano=$1&estado=RR
+RewriteRule ^eleicoes-([^/]*)/tocantins$ /CandiDados/localidade.php?ano=$1&estado=TO
+RewriteRule ^eleicoes-([^/]*)/alagoas$ /CandiDados/localidade.php?ano=$1&estado=AL
+RewriteRule ^eleicoes-([^/]*)/bahia$ /CandiDados/localidade.php?ano=$1&estado=BA
+RewriteRule ^eleicoes-([^/]*)/ceara$ /CandiDados/localidade.php?ano=$1&estado=CE
+RewriteRule ^eleicoes-([^/]*)/maranhao$ /CandiDados/localidade.php?ano=$1&estado=MA
+RewriteRule ^eleicoes-([^/]*)/paraiba$ /CandiDados/localidade.php?ano=$1&estado=PB
+RewriteRule ^eleicoes-([^/]*)/pernambuco$ /CandiDados/localidade.php?ano=$1&estado=PE
+RewriteRule ^eleicoes-([^/]*)/piaui$ /CandiDados/localidade.php?ano=$1&estado=PI
+RewriteRule ^eleicoes-([^/]*)/rio-grande-do-norte$ /CandiDados/localidade.php?ano=$1&estado=RN
+RewriteRule ^eleicoes-([^/]*)/sergipe$ /CandiDados/localidade.php?ano=$1&estado=SE
+RewriteRule ^eleicoes-([^/]*)/distrito-federal$ /CandiDados/localidade.php?ano=$1&estado=DF
+RewriteRule ^eleicoes-([^/]*)/goias$ /CandiDados/localidade.php?ano=$1&estado=GO
+RewriteRule ^eleicoes-([^/]*)/mato-grosso$ /CandiDados/localidade.php?ano=$1&estado=MT
+RewriteRule ^eleicoes-([^/]*)/mato-grosso-do-sul$ /CandiDados/localidade.php?ano=$1&estado=MS
+RewriteRule ^eleicoes-([^/]*)/espirito-santo$ /CandiDados/localidade.php?ano=$1&estado=ES
+RewriteRule ^eleicoes-([^/]*)/minas-gerais$ /CandiDados/localidade.php?ano=$1&estado=MG
+RewriteRule ^eleicoes-([^/]*)/rio-de-janeiro$ /CandiDados/localidade.php?ano=$1&estado=RJ
+RewriteRule ^eleicoes-([^/]*)/sao-paulo$ /CandiDados/localidade.php?ano=$1&estado=SP
+RewriteRule ^eleicoes-([^/]*)/parana$ /CandiDados/localidade.php?ano=$1&estado=PR
+RewriteRule ^eleicoes-([^/]*)/rio-grande-do-sul$ /CandiDados/localidade.php?ano=$1&estado=RS
+RewriteRule ^eleicoes-([^/]*)/santa-catarina$ /CandiDados/localidade.php?ano=$1&estado=SC
 
 #Redirecionamentos de Estados/Cidades
-RewriteRule ^eleicoes-([^/]*)/acre/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=AC&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/amapa/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=AP&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/amazonas/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=AM&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/para/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=PA&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/rondonia/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=RO&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/roraima/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=RR&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/tocantins/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=TO&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/alagoas/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=AL&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/bahia/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=BA&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/ceara/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=CE&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/maranhao/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=MA&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/paraiba/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=PB&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/pernambuco/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=PE&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/piaui/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=PI&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/rio-grande-do-norte/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=RN&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/sergipe/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=SE&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/distrito-federal/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=DF&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/goias/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=GO&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/mato-grosso/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=MT&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/mato-grosso-do-sul/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=MS&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/espirito-santo/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=ES&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/minas-gerais/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=MG&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/rio-de-janeiro/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=RJ&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/sao-paulo/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=SP&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/parana/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=PR&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/rio-grande-do-sul/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=RS&cidade=$2
-RewriteRule ^eleicoes-([^/]*)/santa-catarina/([^/]*)$ /CandiDados/conteudo.php?ano=$1&estado=SC&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/acre/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=AC&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/amapa/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=AP&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/amazonas/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=AM&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/para/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=PA&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/rondonia/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=RO&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/roraima/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=RR&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/tocantins/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=TO&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/alagoas/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=AL&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/bahia/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=BA&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/ceara/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=CE&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/maranhao/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=MA&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/paraiba/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=PB&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/pernambuco/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=PE&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/piaui/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=PI&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/rio-grande-do-norte/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=RN&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/sergipe/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=SE&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/distrito-federal/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=DF&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/goias/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=GO&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/mato-grosso/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=MT&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/mato-grosso-do-sul/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=MS&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/espirito-santo/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=ES&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/minas-gerais/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=MG&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/rio-de-janeiro/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=RJ&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/sao-paulo/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=SP&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/parana/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=PR&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/rio-grande-do-sul/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=RS&cidade=$2
+RewriteRule ^eleicoes-([^/]*)/santa-catarina/([^/]*)$ /CandiDados/localidade.php?ano=$1&estado=SC&cidade=$2
 
 #AC - acre
 #AP - amapa
